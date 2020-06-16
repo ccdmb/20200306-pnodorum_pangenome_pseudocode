@@ -104,6 +104,15 @@ sudo docker run --rm -v "${PWD}:/data:rw" -w "/data" "darcyabjones/snpeff" 05-ru
 
 ## `06-assemble_genomes.sh`
 
+module load java/jdk1.8.0_51
+module load bbmap/38.39-bin
+module switch PrgEnv-cray/6.0.4 PrgEnv-gnu/6.0.4
+module load python/3.6.3
+module load java/jdk1.8.0_51
+module load quast/5.0.2-bin
+module load R/3.5.3
+module load spades/3.13.0-bin
+
 Assemble the genomes using spades, and bbmerge.
 Also perform qc using quast.
 
@@ -114,6 +123,11 @@ TODO: based on mitoflow.
 
 Filter mitochondrial genomes from nuclear genomes (in postasm).
 
+```
+
+darcyabjones/mitoflow
+af42920
+```
 
 ## `08-assembly_qc.sh`
 
